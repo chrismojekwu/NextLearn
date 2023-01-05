@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-rows: 10% 60% 30%;
+}
+
+.header {
+    grid-row: 1/ span 2;
+    text-align: center;
+}
+
+.body {
+    grid-row: 2/ 0;
+}
+
+.footer {
+    grid-row: 3/ span 2;
+}

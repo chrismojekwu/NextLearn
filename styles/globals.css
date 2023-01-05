@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.kids-learn-main-container {
+    min-height: 70vh;
+}

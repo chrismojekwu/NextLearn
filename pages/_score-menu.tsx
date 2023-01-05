@@ -3,12 +3,17 @@ import styles from '../styles/_score-menu.module.css'
 
 export default function ScoreMenu() {
     const [menuOpacity, setMenuOpacity] = React.useState(0);
+    const [menuDisplay, setMenuDisplay] = React.useState("none");
 
     const handleMenu = () => {
         if (menuOpacity === 0) {
+            setMenuDisplay("block");
             setMenuOpacity(1);
         } else {
             setMenuOpacity(0)
+            setTimeout(() => {
+                setMenuDisplay("none")
+            }, 1000)
         }
     };
 
@@ -17,10 +22,11 @@ export default function ScoreMenu() {
             <div 
                 className={
                     `${styles.menuContainer} bg-black text-white absolute 
-                    bottom-0 right-0 z-0`
+                    -bottom-1 right-0 z-0`
                 }
                 style={{
                     opacity: menuOpacity,
+                    display: menuDisplay,
                     width: '50vw',
                     height: '400px'
                 }}
