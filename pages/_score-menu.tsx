@@ -13,7 +13,7 @@ export default function ScoreMenu() {
             setMenuOpacity(0)
             setTimeout(() => {
                 setMenuDisplay("none")
-            }, 1000)
+            }, 500)
         }
     };
 
