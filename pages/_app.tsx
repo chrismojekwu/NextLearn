@@ -4,8 +4,10 @@ import type { AppProps } from 'next/app'
 import Header from './_header'
 import ScoreMenu from './_score-menu'
 import Footer from './_footer'
+import '../styles/index.css'
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <>
       <Head>
@@ -14,12 +16,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-      <Header/>
-      <div className='min-h-500'>
-        <Component/>
+      <div className="kl-container">
+        <Header/>
+        <div className='kl-index-container min-h-500'>
+          <Component/>
+        </div>
+        <Footer/>
+        <ScoreMenu/>
       </div>
-      <Footer/>
-      <ScoreMenu/>
     </>
   )
 }

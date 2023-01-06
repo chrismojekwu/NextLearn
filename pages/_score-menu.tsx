@@ -40,7 +40,7 @@ export default function ScoreMenu() {
             <div 
                 className={
                     `${styles.scoreMenu} rounded-full bg-black text-white 
-                    absolute bottom-0 right-0 z-1`
+                    absolute bottom-3 right-3 z-1`
                 }
                 onClick={() => handleMenu()}
             >

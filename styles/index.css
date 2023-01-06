@@ -1,0 +1,5 @@
+.index-img-wrapper {
+    filter: invert(1);
+    margin: 0 auto;
+    width: fit-content;
+}

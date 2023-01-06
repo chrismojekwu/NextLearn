@@ -1,7 +1,9 @@
+import ActivityLayout from "./_activityLayout"
+
 export default function Animals() {
     return (
-        <>
-            Animals
-        </>
+        <ActivityLayout
+            title="Animals"
+        />
     )
 }

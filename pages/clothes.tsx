@@ -1,7 +1,9 @@
+import ActivityLayout from "./_activityLayout"
+
 export default function Clothes() {
     return (
-        <>
-            Clothes
-        </>
+        <ActivityLayout
+            title="Clothes"
+        />
     )
 }

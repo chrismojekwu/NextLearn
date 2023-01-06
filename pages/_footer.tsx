@@ -15,35 +15,33 @@ export default function Header() {
         } 
     ];
     return (
-        <>
-            <footer className="bg-rose-800 text-white absolute -bottom-1 w-full min-h-100 p-10 flex justify-center">
-                <div className="content flex-column">
-                    <div className="flex justify-center gap-2">
-                        {paths.map((x,i) => {
-                            return (
-                                <Link href={x.path}>
-                                    <Image 
-                                        src={x.src} 
-                                        alt={`${x.name} Icon`}
-                                        key={`icon-img-${i}`}
-                                        width={25}
-                                        height={25}
-                                        className="hover: transition-all text-black"
-                                    />
-                                </Link>
-                            )
-                        })}
-                    </div>
-                    <div className="text-center text-xs"> 
-                        <p>
-                            Privacy Policy
-                        </p>
-                        <p>
-                        Icons provided by Flaticon.com, Freepik.com, & Flaticon users: small like art, item2101, pixel perfect.
-                        </p>
-                    </div>
+        <footer className="kl-footer bg-rose-800 text-white absolute -bottom-1 w-full min-h-100 p-10 flex justify-center">
+            <div className="content flex-column">
+                <div className="flex justify-center gap-2">
+                    {paths.map((x,i) => {
+                        return (
+                            <Link href={x.path}>
+                                <Image 
+                                    src={x.src} 
+                                    alt={`${x.name} Icon`}
+                                    key={`icon-img-${i}`}
+                                    width={25}
+                                    height={25}
+                                    className="hover: transition-all text-black"
+                                />
+                            </Link>
+                        )
+                    })}
                 </div>
-            </footer>
-        </>
+                <div className="text-center text-xs"> 
+                    <p>
+                        Privacy Policy
+                    </p>
+                    <p>
+                    Icons provided by Flaticon.com, Freepik.com, & Flaticon users: small like art, item2101, pixel perfect.
+                    </p>
+                </div>
+            </div>
+        </footer>
     )
 }

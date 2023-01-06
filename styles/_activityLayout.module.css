@@ -1,0 +1,15 @@
+.klActivityLayout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-content: stretch;
+}
+
+.activityDisplay {
+    padding: 10px;
+    height: 100%;
+}
+
+.activityControls {
+    padding: 10px;
+}

@@ -1,7 +1,9 @@
+import ActivityLayout from "./_activityLayout"
+
 export default function Things() {
     return (
-        <>
-            Things
-        </>
+        <ActivityLayout
+            title="Things"
+        />
     )
 }

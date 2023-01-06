@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-.kids-learn-main-container {
+.kl-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 50% 30%;
+    grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "D"
+    ;
+}
+
+.kl-header {
+    grid-area: "a";
+}
+
+.kl-nav {
+    grid-area: "b";
+}
+
+.kl-nav-btn {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.kl-header > * {
+    display: block !important;
+}
+
+.kl-main {
+    background-color: #000;
+}
+
+.kl-header-img {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.kl-index-container {
     min-height: 70vh;
+    grid-area: "c";
+}
+
+.kl-footer {
+    grid-area: "d";
 }

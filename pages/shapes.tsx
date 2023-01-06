@@ -1,7 +1,9 @@
+import ActivityLayout from "./_activityLayout"
+
 export default function Shapes() {
     return (
-        <>
-            Shapes
-        </>
+        <ActivityLayout
+            title="Shapes"
+        />
     )
 }
