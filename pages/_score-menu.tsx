@@ -32,7 +32,7 @@ export default function ScoreMenu() {
             <div 
                 className={
                     `${styles.menuContainer} bg-black text-white absolute 
-                    -bottom-1 right-20 z-0`
+                    -bottom-1 right-0 z-0`
                 }
                 style={{
                     opacity: menuOpacity,
