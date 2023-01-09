@@ -4,6 +4,7 @@ import styles from '../styles/_score-menu.module.css'
 export default function ScoreMenu() {
     const [menuOpacity, setMenuOpacity] = React.useState(0);
     const [menuDisplay, setMenuDisplay] = React.useState("none");
+    const [userData, setUserData] = React.useState<T>(null);
 
     const handleMenu = () => {
         if (menuOpacity === 0) {
@@ -17,12 +18,21 @@ export default function ScoreMenu() {
         }
     };
 
+    const handleGetMockData = async () => {
+        fetch("/api/users")
+            .then((res) => {
+                return res.json()
+            }).then((data) => {
+                setUserData(data.mocks);
+        })
+    }
+
     return (
         <>
             <div 
                 className={
                     `${styles.menuContainer} bg-black text-white absolute 
-                    -bottom-1 right-0 z-0`
+                    -bottom-1 right-20 z-0`
                 }
                 style={{
                     opacity: menuOpacity,
@@ -32,9 +42,28 @@ export default function ScoreMenu() {
                 }}
             >
                 <div 
-                    className={``}
+                    className={styles.menuBody}
                 >
-                    Score
+                    <div>
+                        <h2>User List</h2>
+                        <div>
+                            {userData !== null  ? userData.map((user: any, i: number) => {
+                                return (
+                                    <div key={`user-record-${i}`} className="user-data-div">
+                                        <span>Name: {user.name}</span>
+                                        <span>Joined: {user.joinDate}</span>
+                                        <span>Status: {user.status}</span>
+                                        <span>Assignments: {user.assignments.length}</span>
+                                    </div>
+                                )
+                            }) : ""}
+                        </div>
+                    </div>
+                    <button
+                        onClick={() => handleGetMockData()}
+                    >
+                        Get Mock Data
+                    </button>
                 </div>
             </div>
             <div 

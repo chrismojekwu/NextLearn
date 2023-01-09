@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="flex justify-center gap-2">
                     {paths.map((x,i) => {
                         return (
-                            <Link href={x.path}>
+                            <Link href={x.path} key={`footer-icon-${i}`}>
                                 <Image 
                                     src={x.src} 
                                     alt={`${x.name} Icon`}

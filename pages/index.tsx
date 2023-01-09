@@ -14,7 +14,7 @@ export default function Home() {
         <div className="index-img-wrapper">
           <Image
             src="https://kidslearn.fun/static/media/kidslearn2.65a9beebe08dd7a8337e.png"
-            alt="Picture of the author"
+            alt="Main logo"
             width={450}
             height={450}
             sizes="(max-width: 750px) 50vw, (max-width: 1200px) 75vw"

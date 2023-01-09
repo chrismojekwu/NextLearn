@@ -48,3 +48,14 @@
 .kl-footer {
     grid-area: "d";
 }
+
+.user-data-div {
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 50%;
+}
+
+.user-data-div > * {
+    display: block;
+}

@@ -11,4 +11,10 @@
 
 .menuContainer {
     transition: 1s;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.menuBody {
+    width: 80%;
 }
