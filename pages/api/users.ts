@@ -75,24 +75,7 @@ const mocks = [
           }
       ]
   }
-]
-
-type AssignObj = {
-    location: string,
-    date: string
-}
-
-type User = {
-    id: number,
-    name: string,
-    joinDate: string,
-    status: string,
-    assignments: Array<AssignObj>
-}
-
-type MockData = {
-  users: Array<User>;
-}
+];
 
 export default function handler(
   req: NextApiRequest,
